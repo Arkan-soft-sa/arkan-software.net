@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# editor / local
+*.log
+*.swp
+
+# local Claude Code settings (launch.json is intentionally tracked)
+.claude/settings.local.json
