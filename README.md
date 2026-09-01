@@ -76,6 +76,10 @@ Original vector illustration, drawn for this site — no stock photography, no t
 nothing to licence. It is a few KB of SVG, sharp at any pixel density, and recolours from the
 brand tokens.
 
+**Logo**: the mark is a centred wordmark with a single two-faceted shard, rebuilt as vector
+(`assets/img/logo.svg`, `logo-white.svg`, `favicon.svg`, and inline in the page so it uses the
+page's webfont).
+
 **Riyadh skyline** (`assets/img/artwork.py` generates it; `riyadh-skyline.svg` is the standalone
 asset): Masmak Fort with its Najdi crenellations and date palms, the Riyadh TV tower,
 Al Faisaliah's tapered mast and sphere, Kingdom Centre's bridged legs, a stepped
@@ -127,14 +131,24 @@ Three degradation paths, all deliberate:
 
 Sampled from the company logo and exposed as CSS custom properties in `:root`:
 
-| Token | Value | Used for |
+Sampled from the logo: the plum wordmark, the orchid "software" line, and the lilac shard.
+Darker plums are extensions of the same hue, used for grounds and type.
+
+| Token | Value | From / used for |
 | --- | --- | --- |
-| `--navy-900` | `#111a45` | Dark sections, footer, top bar |
-| `--navy-800` | `#1b2a6b` | Headings, logo wordmark |
-| `--blue-600` | `#3a4a9f` | Primary accent, icons |
-| `--blue-400` | `#5c6fc0` | Gradient end, highlights |
-| `--peri-200` | `#a9b6dd` | Logo bands, soft accents |
-| `--mist-100` / `--mist-50` | `#dde3f3` / `#f2f5fb` | Card and section backgrounds |
+| `--plum-950` | `#1e0f27` | Footer ground |
+| `--plum-900` | `#2a1435` | Dark sections, top bar |
+| `--plum-800` | `#452452` | Headings, gradient mid |
+| `--plum-700` | `#5a3168` | Tag text, deep accents |
+| `--plum-600` | `#6c3f7b` | **Logo wordmark** — primary accent, eyebrows, icons |
+| `--plum-500` | `#7e4c8e` | Gradient end for display type |
+| `--plum-400` | `#9a6bb8` | **Logo "software"** — highlights |
+| `--orchid-300` | `#af87ca` | Shard gradient start |
+| `--lilac-200` | `#c9a9e0` | **Logo shard** — soft accents |
+| `--lilac-100` | `#eadef3` | Chips, icon plates |
+| `--mist-50` | `#f7f3fb` | **Logo ground** — section backgrounds |
+| `--ink` / `--ink-soft` / `--ink-mute` | `#241628` / `#55465f` / `#5b4c65` | Type, purple-biased neutrals |
+| `--on-card-mute` | `#cbbcdc` | Mute text on glass cards, where `--on-dark-mute` only reaches 6.5:1 |
 
 Change a colour once in `:root` and it propagates everywhere.
 
