@@ -155,7 +155,9 @@ html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] h4{lett
 .header.is-stuck{box-shadow:var(--shadow-md);background:rgba(255,255,255,.96)}
 .header__in{display:flex;align-items:center;gap:1.25rem;min-height:74px}
 .logo{flex:none}
-.logo__svg{width:150px;height:auto;direction:ltr}
+/* overflow:visible is insurance: if the display webfont fails to load, the
+   fallback's metrics differ and centred text could otherwise clip again */
+.logo__svg{width:150px;height:auto;direction:ltr;overflow:visible}
 .logo__svg text{font-family:var(--font-display)}
 .logo--light{width:164px;opacity:.98}
 .logo--light .lg-word{fill:#fff}
